@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.arraysstrings;
+package com.example.demo.chatgpt.arrays;
 
 import java.util.*;
 
