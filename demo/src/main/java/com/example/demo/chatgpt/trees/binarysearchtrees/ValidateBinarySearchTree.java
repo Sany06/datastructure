@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.trees;
+package com.example.demo.chatgpt.trees.binarysearchtrees;
 
 public class ValidateBinarySearchTree {
     public boolean isValidBST(TreeNode root) {

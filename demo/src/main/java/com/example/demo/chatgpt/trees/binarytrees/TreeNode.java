@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.trees;
+package com.example.demo.chatgpt.trees.binarytrees;
 
 public class TreeNode {
       int val;

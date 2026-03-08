@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.trees;
+package com.example.demo.chatgpt.trees.binarysearchtrees;
 
 public class LowestCommonAncestorOfABinarySearchTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
