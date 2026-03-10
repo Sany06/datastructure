@@ -1,7 +1,7 @@
 package com.example.demo.chatgpt.binarysearch;
 
 public class FindPeakElement {
-    public int findPeakElement(int[] arr) {
+    public static int findPeakElement(int[] arr) {
         int start = 0;
         int end = arr.length - 1;
 
