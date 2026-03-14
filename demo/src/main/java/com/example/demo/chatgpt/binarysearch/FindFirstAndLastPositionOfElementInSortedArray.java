@@ -13,8 +13,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
         int ans = -1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (nums[mid] == target) {
-                ans=mid;
+            if (nums[mid] == target) {                ans=mid;
                 start=mid+1;
             } else if (nums[mid]>target){
                 end=mid-1;
