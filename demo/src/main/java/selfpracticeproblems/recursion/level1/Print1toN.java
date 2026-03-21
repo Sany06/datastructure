@@ -1,0 +1,34 @@
+package selfpracticeproblems.recursion.level1;
+
+public class Print1toN {
+    static void main(String[] args) {
+        //fun(5);
+        //funcRev(5);
+        funcBoth(5);
+    }
+
+    public static void fun(int n){
+        if (n==0){
+            return;
+        }
+        System.out.println(n);
+        fun(n-1);
+    }
+
+    public static void funcRev(int n){
+        if (n==0){
+            return;
+        }
+        funcRev(n-1);
+        System.out.println(n);
+    }
+
+    public static void funcBoth(int n){
+        if (n==0){
+            return;
+        }
+        System.out.println(n);
+        funcRev(n-1);
+        System.out.println(n);
+    }
+}
