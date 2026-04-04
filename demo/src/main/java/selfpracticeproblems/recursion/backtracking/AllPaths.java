@@ -16,7 +16,7 @@ public class AllPaths {
 
     //here we will be traversing left,right,up,down i.e all possible paths
     static void printAllPaths(String p, int row, int col, boolean[][] board) {
-        if (row == board.length - 1 && col == board[0].length-1) {
+        if (row == board.length - 1 && col == board[0].length - 1) {
             System.out.println(p);
             return;
         }
@@ -51,7 +51,7 @@ public class AllPaths {
     }
 
     static List<String> printAllPathsInList(String p, int row, int col, boolean[][] board) {
-        if (row == board.length - 1 && col == board[0].length-1) {
+        if (row == board.length - 1 && col == board[0].length - 1) {
             List<String> list = new ArrayList<>();
             list.add(p);
             return list;
