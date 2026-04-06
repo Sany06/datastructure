@@ -1,0 +1,14 @@
+| Problem Type                      | Use           |
+| --------------------------------- | ------------- |
+| Max sum                           | ✅ max only    |
+| Max product                       | ⚠️ max + min  |
+| Absolute sum                      | ⚠️ max + min  |
+| Circular sum                      | ⚠️ max + min  |
+| Anything with “remove worst part” | ⚠️ min needed |
+
+
+👉 Ask yourself:
+
+“Can a BAD value become GOOD later?”
+If NO → only max
+If YES → track min also
