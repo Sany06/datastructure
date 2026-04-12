@@ -1,0 +1,42 @@
+########################### REVISION SEQUENCE #############################
+1. Maximum sum subarray of size k
+2. First negative No in Every window of size k
+3. Count Occurrences of Anagrams
+4. Maximum of All Subarrays of size K (sliding window maximum)
+5. Sliding window median
+6. Subarray with Given sum
+
+public class SlidingWindowWhile {
+
+    public static void fixedWindow(int[] arr, int k) {
+        int n = arr.length;
+
+        int i = 0;
+        int j = 0;
+
+        int windowSum = 0; // example metric
+
+        while (j < n) {
+
+            //Do  the operation or condition check
+            sum += arr[j];
+
+            //  2. Check window size
+            if (j - i + 1 < k) {
+                j++;
+            }
+            else if (j - i + 1 == k) {
+
+                //  3. Process window
+                System.out.println(windowSum); // example
+
+                //  4. Remove i element
+                windowSum -= arr[i];
+
+                // 5. Slide window
+                i++;
+                j++;
+            }
+        }
+    }
+}

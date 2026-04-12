@@ -1,4 +1,4 @@
-package com.example.demo.leetcode150.kadane;
+package selfpracticeproblems.arrays.kadane;
 
 public class MaximumSubarray {
     static void main(String[] args) {

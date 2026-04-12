@@ -1,4 +1,4 @@
-package com.example.demo.leetcode150.kadane;
+package com.example.demo.leetcode150.array.kadane;
 
 public class MaximumSumCircularSubarray {
     public int maxSubarraySumCircular(int[] nums) {
