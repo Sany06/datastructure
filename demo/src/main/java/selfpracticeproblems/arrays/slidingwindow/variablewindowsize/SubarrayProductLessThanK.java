@@ -8,7 +8,7 @@ public class SubarrayProductLessThanK {
 
             product *= nums[j];
 
-            while (product >= k && i <= j) {
+            while (product >= k) {
                 product /= nums[i];
                 i++;
             }

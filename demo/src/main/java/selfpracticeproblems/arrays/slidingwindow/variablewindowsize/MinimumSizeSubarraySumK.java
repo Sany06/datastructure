@@ -1,5 +1,5 @@
 package selfpracticeproblems.arrays.slidingwindow.variablewindowsize;
-
+// sub array sum >= k
 public class MinimumSizeSubarraySumK {
     public int minSubArrayLen(int k, int[] arr) {
         int res = Integer.MAX_VALUE, left = 0;
@@ -17,6 +17,6 @@ public class MinimumSizeSubarraySumK {
             }
 
         }
-        return res;
+        return (res == Integer.MAX_VALUE) ? 0 : res;
     }
 }

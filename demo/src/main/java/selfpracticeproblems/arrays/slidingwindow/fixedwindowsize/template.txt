@@ -30,7 +30,8 @@ public class SlidingWindowWhile {
                 //  3. Process window
                 System.out.println(windowSum); // example
 
-                //  4. Remove i element
+                //  Before sliding the window, eliminate the element which will
+                // move out of the window
                 windowSum -= arr[i];
 
                 // 5. Slide window

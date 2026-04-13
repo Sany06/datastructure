@@ -12,3 +12,10 @@
 “Can a BAD value become GOOD later?”
 If NO → only max
 If YES → track min also
+
+
+################# REVISION ORDER ###################
+MaximumSubarray
+MaximumProductSubarray
+MaximumAbsoluteSumOfAnySubarray
+MaximumSumCircularSubarray

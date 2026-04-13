@@ -1,19 +1,47 @@
 package selfpracticeproblems.arrays.kadane;
 
 public class MaximumProductSubarray {
-    public int maxProduct(int[] nums) {
-        int curr_max = nums[0];
-        int curr_min = nums[0];
-        int max_so_far = nums[0];
 
-        for (int i = 1; i < nums.length ; i++) {
-            int temp  = curr_max;
-            curr_max = Math.max(nums[i], Math.max(nums[i] * curr_max, nums[i] * curr_min));
-            curr_min = Math.min(nums[i], Math.min(nums[i] * temp, nums[i] * curr_min));
+    public int maxProduct1(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
 
-            max_so_far = Math.max(max_so_far,curr_max);
+        int currMax = nums[0];
+        int currMin = nums[0];
+        int maxSoFar = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            int val = nums[i];
+
+            // If negative, swap
+            if (val < 0) {
+                int temp = currMax;
+                currMax = currMin;
+                currMin = temp;
+            }
+
+            currMax = Math.max(val, val * currMax);
+            currMin = Math.min(val, val * currMin);
+
+            maxSoFar = Math.max(maxSoFar, currMax);
         }
 
-        return max_so_far;
+        return maxSoFar;
     }
+    public int maxProduct2(int[] nums) {
+        int currMax = nums[0];
+        int currMin = nums[0];
+        int maxSoFar = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            int temp = currMax;
+            currMax = Math.max(nums[i], Math.max(nums[i] * currMax, nums[i] * currMin));
+            currMin = Math.min(nums[i], Math.min(nums[i] * temp, nums[i] * currMin));
+
+            maxSoFar = Math.max(maxSoFar, currMax);
+        }
+
+        return maxSoFar;
+    }
+
+
 }

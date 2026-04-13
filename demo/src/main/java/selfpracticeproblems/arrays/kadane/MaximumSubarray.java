@@ -7,13 +7,13 @@ public class MaximumSubarray {
     }
 
     public static int maxSubArray(int[] nums) {
-        int curr_max = nums[0];
-        int max_so_far = nums[0];
+        int currMax = nums[0];
+        int maxSoFar = nums[0];
 
         for (int i = 1 ; i< nums.length ; i++) {
-            curr_max = Math.max(nums[i] , nums[i] + curr_max);
-            max_so_far = Math.max(curr_max,max_so_far);
+            currMax = Math.max(nums[i] , nums[i] + currMax);
+            maxSoFar = Math.max(currMax,maxSoFar);
         }
-        return max_so_far;
+        return maxSoFar;
     }
 }

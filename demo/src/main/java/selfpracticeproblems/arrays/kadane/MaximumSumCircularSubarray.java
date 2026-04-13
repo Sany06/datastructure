@@ -13,7 +13,7 @@ public class MaximumSumCircularSubarray {
             maxSoFar = Math.max(maxSoFar,currMax);
 
             //
-            currMin = Math.min(num, num + currMin);
+            currMin = Math.min(num, currMin + num );
             minSoFar = Math.min(minSoFar,currMin);
 
             totalSum += num;
