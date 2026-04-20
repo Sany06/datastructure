@@ -1,7 +1,7 @@
 package com.example.demo.chatgpt.binarysearch.binarysearchonanswers;
 
 import java.util.Arrays;
-
+//https://www.geeksforgeeks.org/problems/aggressive-cows/1
 public class AggressiveCows {
     public int aggressiveCows(int[] stalls, int k) {
         int ans = 0;
@@ -33,7 +33,7 @@ public class AggressiveCows {
                 noOfCows++;
             }
         }
-        return noOfCows >= k;
+        return noOfCows >= k; // as noOfCows = maximum cows you can place with distance ≥ mid
 
     }
 }

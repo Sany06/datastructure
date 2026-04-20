@@ -1,0 +1,31 @@
+############ DECISION MAKING FOR BINARY SEARCH ON ANSWERS######################
+If you see:
+"within", "at most", "maximum allowed" use <=K
+
+If you see:
+"at least", "minimum required", "form", "place" use >= K
+
+public static int solve(int low, int high) {
+        int start = low;
+        int end = high;
+        int ans = -1; // or high / 0 depending on problem
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (isPossible(mid)) {
+                ans = mid;
+
+                // 🔽 CHANGE THIS LINE depending on problem
+                end = mid - 1;   // for MINIMIZE
+                // start = mid + 1; // for MAXIMIZE
+            } else {
+                start = mid + 1;
+
+                // OR (if logic reversed)
+                // end = mid - 1;
+            }
+        }
+
+        return ans;
+    }

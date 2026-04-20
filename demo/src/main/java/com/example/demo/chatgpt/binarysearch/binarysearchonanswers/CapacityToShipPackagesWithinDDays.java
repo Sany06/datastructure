@@ -1,5 +1,5 @@
 package com.example.demo.chatgpt.binarysearch.binarysearchonanswers;
-
+//https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
 public class CapacityToShipPackagesWithinDDays {
     public int shipWithinDays(int[] weights, int D) {
         int minCapacity = 0;

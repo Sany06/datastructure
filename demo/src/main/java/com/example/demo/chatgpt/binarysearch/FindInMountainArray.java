@@ -1,6 +1,6 @@
 package com.example.demo.chatgpt.binarysearch;
 
-import static com.example.demo.chatgpt.binarysearch.FindPeakElement.findPeakElement;
+import static com.example.demo.chatgpt.binarysearch.FindPeakElement.findPeakElementIndex;
 
 public class FindInMountainArray {
     static void main(String[] args) {
@@ -9,7 +9,7 @@ public class FindInMountainArray {
     }
 
     public static int findIndex(int[] arr, int target) {
-        int peakIndex = findPeakElement(arr);
+        int peakIndex = findPeakElementIndex(arr);
         int index = findIndex(arr, target, 0, peakIndex);
         return index == -1 ? findIndex(arr, target, peakIndex + 1, arr.length - 1) : index;
 

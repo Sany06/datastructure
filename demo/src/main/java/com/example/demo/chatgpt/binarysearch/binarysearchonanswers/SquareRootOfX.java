@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.binarysearch;
+package com.example.demo.chatgpt.binarysearch.binarysearchonanswers;
 
 public class SquareRootOfX {
 
@@ -9,6 +9,7 @@ public class SquareRootOfX {
         int result = 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
+
             long square = (long) mid * mid;
 
 

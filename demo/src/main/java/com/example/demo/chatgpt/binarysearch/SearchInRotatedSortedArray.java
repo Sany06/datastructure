@@ -3,7 +3,7 @@ package com.example.demo.chatgpt.binarysearch;
 public class SearchInRotatedSortedArray {
 
     public int search(int[] arr, int target) {
-        int pivot = findPivot(arr);
+        int pivot = findPivotIndex(arr);
 
         if (pivot == -1) {
             return binarySearch(arr, target, 0, arr.length - 1);
@@ -20,7 +20,7 @@ public class SearchInRotatedSortedArray {
     }
 
 
-    public static int findPivot(int[] arr) {
+    public static int findPivotIndex(int[] arr) {
         //For finding peak we have 4 cases
         int start = 0;
         int end = arr.length - 1;

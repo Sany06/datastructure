@@ -1,23 +1,25 @@
-package com.example.demo.chatgpt.linkedlists;
+package selfpracticeproblems.linkedlist.fastandslowpointers;
 
-//https://leetcode.com/problems/linked-list-cycle-ii/description/
+
 public class LinkedListCycleII {
 
     public ListNode detectCycle(ListNode head) {
         ListNode fast = head;
         ListNode slow = head;
-        while (fast != null && fast.next != null) {
+
+        while(fast != null && fast.next!= null) {
             fast = fast.next.next;
             slow = slow.next;
+
             if (fast == slow) {
-                //Step 1- Reset slow to head
+
                 slow = head;
-                //Step - 2 Move both pointers by 1 steps
-                while (slow != fast) {
+
+                while(fast != slow){
                     slow = slow.next;
                     fast = fast.next;
                 }
-                return slow; // or fast as both will be at same place
+                return slow;
             }
         }
         return null;

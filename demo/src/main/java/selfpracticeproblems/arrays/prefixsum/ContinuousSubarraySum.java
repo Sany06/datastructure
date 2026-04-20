@@ -5,6 +5,8 @@ import java.util.Map;
 
 public class ContinuousSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
+        //If two prefix sums have same remainder
+        //⇒ subarray between them is divisible by k
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0 , -1);
         int sum = 0 ;

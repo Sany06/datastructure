@@ -1,4 +1,5 @@
-package com.example.demo.chatgpt.linkedlists;
+package selfpracticeproblems.linkedlist.reverse;
+
 
 public class PalindromeLinkList {
 

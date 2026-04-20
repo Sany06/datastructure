@@ -3,7 +3,7 @@ package com.example.demo.chatgpt.binarysearch;
 public class RotateArray {
     //There are 3 steps to rotate an array by k times
     public void rotate(int[] nums, int k) {
-        int n=nums.length;
+        int n = nums.length;
         // We have to reduce no of rotation as k can be greater than arraylength,
         //so we are counting the effective rotation as rotating the array k times
         //means we will get the same array
@@ -16,11 +16,11 @@ public class RotateArray {
         rotateArr(nums,k,nums.length-1);
     }
 
-    public void rotateArr(int[] arr,int startIndex,int endIndex){
-        while(startIndex<=endIndex){
-            int temp=arr[startIndex];
-            arr[startIndex]=arr[endIndex];
-            arr[endIndex]=temp;
+    public void rotateArr(int[] arr, int startIndex, int endIndex) {
+        while (startIndex <= endIndex) {
+            int temp = arr[startIndex];
+            arr[startIndex] = arr[endIndex];
+            arr[endIndex] = temp;
             startIndex++;
             endIndex--;
         }

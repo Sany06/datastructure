@@ -9,14 +9,15 @@ public class SearchInsertPosition {
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (arr[mid] > target) {
-                end = mid - 1;
+            if (arr[mid] == target) {
+                return mid;  // found
             } else if (arr[mid] < target) {
                 start = mid + 1;
-            } else if (arr[mid]==target){
-                return mid;
+            } else {
+                end = mid - 1;
             }
         }
-        return start;
+
+        return start; // as start is the first index where element ≥ target
     }
 }

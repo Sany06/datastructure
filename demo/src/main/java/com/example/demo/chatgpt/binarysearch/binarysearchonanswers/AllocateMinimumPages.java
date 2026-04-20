@@ -1,5 +1,5 @@
 package com.example.demo.chatgpt.binarysearch.binarysearchonanswers;
-
+//https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1
 public class AllocateMinimumPages {
     public int findPages(int[] arr, int k) {
         if (k > arr.length) return -1;
@@ -9,7 +9,7 @@ public class AllocateMinimumPages {
 
         for (int pages : arr) {
             min = Math.max(min, pages);
-            max = max + pages;
+            max +=  pages;
         }
 
         while (min <= max) {
@@ -32,9 +32,11 @@ public class AllocateMinimumPages {
         for (int pages : arr) {
             if (totalPages + pages > mid) {
                 student++;
-                totalPages = 0;
+                totalPages = pages;
             }
-            totalPages += pages;
+            else{
+                totalPages += pages;
+            }
         }
         return student <= k;
     }

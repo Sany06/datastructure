@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SubarraySumsDivisibleByK {
+    //If prefix[i] % k == prefix[j] % k
+    //subarray sum between i and j is divisible by k
     public int subarraysDivByK(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
