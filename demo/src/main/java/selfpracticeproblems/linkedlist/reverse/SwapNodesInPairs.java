@@ -13,9 +13,11 @@ public class SwapNodesInPairs {
 
             first.next = second.next;
             second.next = first;
+
+
             prev.next = second;
 
-            prev  = first;
+            prev = first;
         }
 
         return dummy.next;
