@@ -2,7 +2,7 @@ package com.example.demo.chatgpt.linkedlists;
 
 public class ReverseNodesInKGroup {
     public ListNode reverseKGroup(ListNode head, int k) {
-        if (head == null && k < 2) {
+        if (head == null || k < 2) {
             return head;
         }
         ListNode dummy = new ListNode(0);

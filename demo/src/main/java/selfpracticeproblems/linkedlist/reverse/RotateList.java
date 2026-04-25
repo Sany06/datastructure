@@ -14,10 +14,9 @@ public class RotateList {
         }
 
         last.next = head;
-        int rotations = k % length;
-        int skip = length - rotations;
+        k = k % length;
         ListNode newLast = head;
-        for (int i = 1; i < skip; i++) {
+        for (int i = 1; i < length - k; i++) {
             newLast = newLast.next;
         }
         head = newLast.next;
