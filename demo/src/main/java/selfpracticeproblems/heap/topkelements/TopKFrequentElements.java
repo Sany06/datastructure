@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.heap;
+package selfpracticeproblems.heap.topkelements;
 
 import java.util.HashMap;
 import java.util.PriorityQueue;

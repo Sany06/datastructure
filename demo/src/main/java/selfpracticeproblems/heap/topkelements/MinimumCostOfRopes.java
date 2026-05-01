@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.heap.huffmanpattern;
+package selfpracticeproblems.heap.topkelements;
 
 import java.util.PriorityQueue;
 

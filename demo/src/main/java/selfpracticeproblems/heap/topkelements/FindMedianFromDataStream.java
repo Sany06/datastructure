@@ -1,12 +1,12 @@
-package com.example.demo.chatgpt.heap;
+package selfpracticeproblems.heap.topkelements;
 
 import java.util.PriorityQueue;
 
-public class MedianFinder {
+public class FindMedianFromDataStream {
     PriorityQueue<Integer> left_max_heap;
     PriorityQueue<Integer> right_min_heap;
 
-    public MedianFinder() {
+    public FindMedianFromDataStream() {
         left_max_heap = new PriorityQueue<>((a,b)-> b-a);
         right_min_heap = new PriorityQueue<>();
     }

@@ -7,12 +7,12 @@ public class HappyNumber {
     }
 
     public static boolean isHappy(int n) {
-        int slow=n;
-        int fast=n;
+        int slow = n;
+        int fast = n;
         do{
             slow= sumOfSquareOfDigits(slow);
             fast = sumOfSquareOfDigits(sumOfSquareOfDigits(fast));
-        } while(slow!=fast);
+        } while (slow != fast);
         return slow == 1;
     }
 

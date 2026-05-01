@@ -2,12 +2,12 @@ package com.example.demo.chatgpt.heap;
 
 import java.util.PriorityQueue;
 //kth largest element in a stream
-public class KthLargest {
+public class KthLargestInAStream {
 
     PriorityQueue<Integer> pq;
     int capacity=0;
 
-    public KthLargest(int k, int[] nums) {
+    public KthLargestInAStream(int k, int[] nums) {
         pq=new PriorityQueue<>();
         this.capacity=k;
 
