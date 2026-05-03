@@ -1,6 +1,6 @@
 package com.example.demo.chatgpt.linkedlists;
 
-//https://leetcode.com/problems/happy-number/description/
+
 public class HappyNumber {
     public static void main(String[] args) {
         System.out.println(isHappy(19));
