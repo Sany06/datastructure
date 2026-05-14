@@ -11,12 +11,14 @@ public class DecodeString {
         int num = 0;
 
         for (char ch : s.toCharArray()) {
+            //Step-1
             if (Character.isDigit(ch)) {
                 num = num * 10 + (ch - '0'); // handle multi-digit numbers
             }
             //Push current number num into stack
             //Push current string
             //Reset current and num
+            //Step - 2
             else if (ch == '[') {
                 countStack.push(num);
                 num = 0;
@@ -27,6 +29,7 @@ public class DecodeString {
             //Pop previous string
             //Repeat current substring k times
             //Append to previous string
+            //Step - 3
             else if (ch == ']') {
                 int repeat = countStack.pop();
                 StringBuilder prev = stringStack.pop();
@@ -36,6 +39,7 @@ public class DecodeString {
                 }
                 current = prev;
             }
+            //Step - 4
             else {
                 current.append(ch);
             }

@@ -10,6 +10,8 @@ public class EvaluateReversePolishNotation {
                 switch(token) {
                     case "+" : stack.push(stack.pop() + stack.pop());
                         break;
+                    case "*" : stack.push(stack.pop() * stack.pop());
+                        break;
                     case "-" :
                         int b = stack.pop();
                         int a = stack.pop();
@@ -18,8 +20,6 @@ public class EvaluateReversePolishNotation {
                     case "/" : int d = stack.pop();
                         int c = stack.pop();
                         stack.push(c / d);
-                        break;
-                    case "*" : stack.push(stack.pop() * stack.pop());
                         break;
                     default : stack.push(Integer.parseInt(token));
                 }

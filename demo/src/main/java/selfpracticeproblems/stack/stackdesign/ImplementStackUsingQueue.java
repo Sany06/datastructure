@@ -3,10 +3,10 @@ package selfpracticeproblems.stack.stackdesign;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ImplementQueueUsingStacks {
+public class ImplementStackUsingQueue {
     public Queue<Integer> q;
 
-    public ImplementQueueUsingStacks() {
+    public ImplementStackUsingQueue() {
         q = new LinkedList();
 
     }

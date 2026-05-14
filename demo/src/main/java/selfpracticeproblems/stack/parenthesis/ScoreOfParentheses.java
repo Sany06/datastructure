@@ -12,7 +12,7 @@ public class ScoreOfParentheses {
                 stack.push(0);
             } else {
                 int n = stack.pop();
-                int score = Math.max(2*n, 1);
+                int score = Math.max(2 * n, 1);
                 stack.push(stack.pop() + score);
             }
         }

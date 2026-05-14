@@ -2,11 +2,11 @@ package selfpracticeproblems.stack.stackdesign;
 
 import java.util.Stack;
 
-public class ImplementStackUsingQueues {
+public class ImplementQueueUsingStack {
     public Stack<Integer> fstack;
     public Stack<Integer> sstack;
 
-    public ImplementStackUsingQueues() {
+    public ImplementQueueUsingStack() {
         fstack = new Stack<>();
         sstack = new Stack<>();
 

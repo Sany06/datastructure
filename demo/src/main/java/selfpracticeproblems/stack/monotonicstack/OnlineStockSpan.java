@@ -13,6 +13,7 @@ public class OnlineStockSpan {
     public int next(int price) {
         int span = 1;
 
+        //This loop removes all smaller/equal prices from the stack.
         while (!stack.isEmpty() && stack.peek()[0] <= price) {
             span +=  stack.peek()[1];
             stack.pop();

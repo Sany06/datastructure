@@ -7,14 +7,17 @@ public class BasicCalculatorII {
         Stack<Integer> stack = new Stack<>();
         int num = 0;
         char sign = '+';
+        int result = 0;
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
 
+            //Step-1 construct the num
             if (Character.isDigit(ch)) {
                 num = num * 10 + (ch - '0');
             }
 
+            //Step- 2 process if we are getting sign
             // We delay + and -, but resolve * and / immediately.
             if ((!Character.isDigit(ch) && ch != ' ') || i == s.length() - 1) {
 
@@ -28,12 +31,13 @@ public class BasicCalculatorII {
                     stack.push(stack.pop() / num);
                 }
 
+                //Remember to reset the sign and num
                 sign = ch;
                 num = 0;
             }
         }
 
-        int result = 0;
+
         for (int val : stack) {
             result += val;
         }
