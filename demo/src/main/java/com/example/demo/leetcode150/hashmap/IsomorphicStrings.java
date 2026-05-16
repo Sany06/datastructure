@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 public class IsomorphicStrings {
+    //Compare previous occurrence positions
     public boolean isIsomorphic(String s, String t) {
         HashMap<Character,Integer> map1 = new HashMap<>();
         HashMap<Character,Integer> map2 = new HashMap<>();
