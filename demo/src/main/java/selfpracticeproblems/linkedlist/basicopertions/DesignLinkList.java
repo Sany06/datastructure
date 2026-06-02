@@ -1,7 +1,9 @@
 package selfpracticeproblems.linkedlist.basicopertions;
 
-//Trick To remember If we have to add/delete a node at an index then we have to traverse to  the node before that index
-// for that we have to do for(int i = 0;  i < index -1 ;i++) as this is 0 based indexing
+//Trick To remember If we have to add/delete a node at an index then we have to traverse to the node before that index
+// for that we have to do for(int i = 0;  i < index - 1 ;i++) as this is 0 based indexing
+
+// If we want to traverse to any node we have to do  for (int i = 0; i < index ; i++)
 public class DesignLinkList {
     class Node {
         int val;

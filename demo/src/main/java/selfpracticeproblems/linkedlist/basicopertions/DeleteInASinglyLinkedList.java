@@ -3,23 +3,24 @@ package selfpracticeproblems.linkedlist.basicopertions;
 public class DeleteInASinglyLinkedList {
     //delete xth node
     Node deleteNode(Node head, int x) {
+        Node dummy = new Node(-1);
+        dummy.next=head;
+
         if (x == 1) {
-            head = head.next;
-            return head;
-        }
-        int count = 1;
-
-        Node temp = head;
-
-        while(count != x - 1) {
-            temp = temp.next;
-            count++;
+            Node curr = head;
+            head = curr.next;
+            curr.next = null;
+            dummy.next = head;
+            return dummy.next;
         }
 
-        temp.next = temp.next.next;
-
-        return head;
-
-
+        Node curr = head;
+        for (int i = 1 ; i < x -1 ; i++ ) {
+            curr = curr.next;
+        }
+        Node t = curr.next;
+        curr.next= curr.next.next;
+        t.next= null;
+        return dummy.next;
     }
 }

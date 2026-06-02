@@ -1,4 +1,4 @@
-package selfpracticeproblems.linkedlist.basicopertions;
+package selfpracticeproblems.linkedlist.fastandslowpointers;
 
 public class RemoveNthNodeFromEndOfList {
     public ListNode removeNthFromEnd(ListNode head, int n) {
