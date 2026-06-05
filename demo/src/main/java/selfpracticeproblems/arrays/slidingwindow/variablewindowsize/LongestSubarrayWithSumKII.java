@@ -2,7 +2,7 @@ package selfpracticeproblems.arrays.slidingwindow.variablewindowsize;
 
 import java.util.HashMap;
 import java.util.Map;
-
+// this approach is applicable for negative values also
 public class LongestSubarrayWithSumKII {
     public int longestSubarray(int[] arr, int k) {
         Map<Integer, Integer> map = new HashMap<>();
