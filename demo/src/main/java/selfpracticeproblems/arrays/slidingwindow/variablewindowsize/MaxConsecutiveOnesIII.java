@@ -6,7 +6,8 @@ public class MaxConsecutiveOnesIII {
 
         for (int j = 0 ; j < nums.length ; j++) {
             if(nums[j] == 0) zero++;
-
+            //If the current window contains more than k zeros,
+            // keep removing elements from the left until the window contains at most k zeros.
             while(zero > k){
                 if(nums[i] == 0){
                     zero--;

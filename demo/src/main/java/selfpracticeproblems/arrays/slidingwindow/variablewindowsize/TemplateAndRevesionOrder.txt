@@ -1,8 +1,14 @@
 LongestSubarrayWithSumK
 MinimumSizeSubarraySumK
-LongestSubstringWithKUniques
 Longest Substring Without Repeating Characters
 SubarrayProductLessThanK
+MaxConsecutiveOnesIII
+
+
+
+Frequency Use case
+LongestSubstringWithKUniques
+SubarraysWithKDistinct
 
 
 String
@@ -11,6 +17,13 @@ LongestSubstringWithKUniques
 MinimumWindowSubString
 
 
+SUBARRAY PROBLEMS LOGIC
+____________________________
+| Problem asks for           | Typical approach                                      |
+| -------------------------- | ----------------------------------------------------- |
+| `< K`, `<= K`, `at most K` | One sliding window                                    |
+| `exactly K`                | `atMost(K) - atMost(K-1)`                             |
+| `>= K`                     | Often use complement counting (`total - atMost(K-1)`) |
 
 
 int i = 0, ans = 0;
