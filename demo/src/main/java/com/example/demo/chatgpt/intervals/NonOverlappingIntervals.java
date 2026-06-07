@@ -9,15 +9,15 @@ public class NonOverlappingIntervals {
         if (intervals.length == 0)
             return 0;
 
-        Arrays.sort(intervals, Comparator.comparingInt(a-> a[1]));
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[1]));
 
-        int nonOverLappingCount=1;
+        int nonOverLappingCount = 1;
 
-        int previousIntervalIndex=0;
+        int previousIntervalIndex = 0;
 
-        for(int i=1;i<intervals.length;i++){
-            if(intervals[i][0]  >= intervals[previousIntervalIndex][1]) {
-                previousIntervalIndex=i;
+        for (int i = 1; i < intervals.length; i++) {
+            if (intervals[i][0] >= intervals[previousIntervalIndex][1]) {
+                previousIntervalIndex = i;
                 nonOverLappingCount++;
             }
         }

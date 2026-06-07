@@ -7,23 +7,25 @@ import java.util.List;
 
 public class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
-        if(intervals.length==0){
+        if (intervals.length == 0) {
             return new int[][]{};
         }
 
-        Arrays.sort(intervals, Comparator.comparingInt(a->a[0]));
+        Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 
-        List<int []> list = new ArrayList<>();
+        List<int[]> list = new ArrayList<>();
 
         int[] newInterval = intervals[0];
         list.add(newInterval);
 
-        for(int[] interval:intervals){
-            if(interval[0] <= newInterval[1]){
-                newInterval[1]=Math.max(interval[1],newInterval[1]);
-
-            } else{
-                newInterval=interval;
+        for (int[] interval : intervals) {
+            // if current.start < merged.end then overlap exists
+            //So update the end of newInterval accordingly
+            if (interval[0] <= newInterval[1]) {
+                newInterval[1] = Math.max(interval[1], newInterval[1]);
+            // If no overlapping start a new newInterval and add it to the list
+            } else {
+                newInterval = interval;
                 list.add(newInterval);
             }
         }
