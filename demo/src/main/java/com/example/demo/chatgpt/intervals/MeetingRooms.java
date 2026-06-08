@@ -7,28 +7,26 @@ import java.util.Comparator;
 public class MeetingRooms {
 
     static void main(String[] args) {
-        int[][] arr = {{1, 4}, {10, 15} ,{7,10}};
+        int[][] arr = {{1, 4}, {10, 15}, {7, 10}};
         System.out.println(canAttend(arr));
     }
 
     static boolean canAttend(int[][] arr) {
-        if (arr.length<=1){
+        if (arr.length <= 1) {
             return true;
         }
 
-        Arrays.sort(arr, Comparator.comparingInt(s->s[1]));
+        Arrays.sort(arr, Comparator.comparingInt(a -> a[1]));
 
-        boolean result = true;
+        int[] previnterval = arr[0];
 
-        int[] prev = arr[0];
-
-        for (int i=1;i< arr.length;i++) {
-            if (arr[i][0] < prev[1]) {
+        for (int i = 1; i < arr.length; i++) {
+            int[] currinterval = arr[i];
+            if (currinterval[0] < previnterval[1]) {
                 return false;
-            } else {
-                prev = arr[i];
             }
+            previnterval = currinterval;
         }
-        return result;
+        return true;
     }
 }

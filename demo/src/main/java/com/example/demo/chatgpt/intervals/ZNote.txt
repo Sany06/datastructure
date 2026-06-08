@@ -1,0 +1,14 @@
+Revision Sequence
+
+1. Merge Intervals
+2. Insert Intervals followed by Insert Intervals Optimized
+3. Non Overlapping Intervals
+4. Meeting Room
+5. Meeting Room II
+6. Arrows to Burst Balloons
+
+
+Core logic for most of the problems
+
+ if (currInterval[0] <= prevInterval[1]) {
+        prevInterval[1] = Math.max(currInterval[1], prevInterval[1]);

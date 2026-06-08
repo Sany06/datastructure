@@ -15,18 +15,18 @@ public class MergeIntervals {
 
         List<int[]> list = new ArrayList<>();
 
-        int[] newInterval = intervals[0];
-        list.add(newInterval);
+        int[] prevInterval = intervals[0];
+        list.add(prevInterval);
 
-        for (int[] interval : intervals) {
+        for (int[] currInterval : intervals) {
             // if current.start < merged.end then overlap exists
             //So update the end of newInterval accordingly
-            if (interval[0] <= newInterval[1]) {
-                newInterval[1] = Math.max(interval[1], newInterval[1]);
+            if (currInterval[0] <= prevInterval[1]) {
+                prevInterval[1] = Math.max(currInterval[1], prevInterval[1]);
             // If no overlapping start a new newInterval and add it to the list
             } else {
-                newInterval = interval;
-                list.add(newInterval);
+                prevInterval = currInterval;
+                list.add(prevInterval);
             }
         }
         return list.toArray(new int[list.size()][]);
