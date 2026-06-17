@@ -20,7 +20,7 @@ public class TrappingRainWater {
             }
             if (height[right] > rightMax) {
                 rightMax = height[right];
-            }
+            } //If leftMax < rightMax, the water is completely determined by leftMax, so process left. Otherwise, process right.
             if (leftMax < rightMax) {
                 capacity += leftMax - height[left];
                 left++;

@@ -12,7 +12,7 @@ public class MaximumProductSubarray {
         for (int i = 1; i < nums.length; i++) {
             int val = nums[i];
 
-            // If negative, swap
+            // If val is negative, swap
             if (val < 0) {
                 int temp = currMax;
                 currMax = currMin;

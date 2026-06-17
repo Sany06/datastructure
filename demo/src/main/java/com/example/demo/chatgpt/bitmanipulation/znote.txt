@@ -1,0 +1,27 @@
+revision Sequence
+
+1: FindOddEven
+2: Find unique element in array
+3: Find unique among positive and negative integers
+4: Find ith bit of a num
+5: Set the ith bit
+6: Reset ith bit (make 0)
+7: Find position of rightmost set bit
+8: Find the unique element present in an array others are present 3 times
+9: Find num of digits
+10: Find if a num is power of 2
+11: Find power of num
+12: Find no of set bit
+13:
+
+
+
+
+
+//Point to remember
+For Finding ith bit we have to do (n >> i) & 1
+When we do right shift it modifies the num
+
+For Setting the ith bit we cant modify the num,
+so we create a mask by doing 1 << i where we move the 1 to the required bit and then OR with n
+( 1 << i) | n
