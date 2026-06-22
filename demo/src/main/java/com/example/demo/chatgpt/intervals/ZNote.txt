@@ -10,5 +10,5 @@ Revision Sequence
 
 Core logic for most of the problems
 
- if (currInterval[0] <= prevInterval[1]) {
+if (currInterval[0] <= prevInterval[1]) {
         prevInterval[1] = Math.max(currInterval[1], prevInterval[1]);

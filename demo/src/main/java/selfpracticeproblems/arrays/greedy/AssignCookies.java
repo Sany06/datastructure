@@ -9,12 +9,12 @@ public class AssignCookies {
 
         int count = 0;
 
-        int child = 0, cookie = 0;
+        int greed = 0, cookie = 0;
 
-        while (child < g.length && cookie < s.length) {
-            if (g[child] <= s[cookie] ) {
+        while (greed < g.length && cookie < s.length) {
+            if (g[greed] <= s[cookie] ) {
                 count++;
-                child++;
+                greed++;
             }
             cookie++;
         }
