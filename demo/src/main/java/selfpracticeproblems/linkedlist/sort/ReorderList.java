@@ -13,7 +13,7 @@ public class ReorderList {
             fast = fast.next.next;
         }
 
-        // Step 2: Reverse second half
+        // Step 2: Break the connection after min and Reverse second half
         ListNode curr = slow.next;
         slow.next = null;
 

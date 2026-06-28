@@ -3,8 +3,8 @@ package com.example.demo.chatgpt.heap;
 import java.util.PriorityQueue;
 
 public class MedianFinder {
-    PriorityQueue<Integer> left_max_heap;
-    PriorityQueue<Integer> right_min_heap;
+    PriorityQueue<Integer> left_max_heap;  //max heap stores min half of the nums
+    PriorityQueue<Integer> right_min_heap; //min heap stores max half of the nums
 
     public MedianFinder() {
         left_max_heap = new PriorityQueue<>((a,b)-> b-a);

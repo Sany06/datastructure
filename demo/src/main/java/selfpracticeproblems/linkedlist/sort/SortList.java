@@ -1,6 +1,11 @@
 package selfpracticeproblems.linkedlist.sort;
 
 public class SortList {
+
+    //Approach
+    //Find mid
+    //sort halves
+    //merge sorted halves
     public ListNode sortList(ListNode head) {
 
         if (head == null || head.next == null) {

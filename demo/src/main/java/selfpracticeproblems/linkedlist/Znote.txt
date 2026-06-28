@@ -1,0 +1,12 @@
+
+WHILE LOOP CONDITIONS:
+
+When Finding MID---------
+while(fast != null && fast.next != null) {
+}
+
+
+
+While reversing LL
+
+while(curr != null )
