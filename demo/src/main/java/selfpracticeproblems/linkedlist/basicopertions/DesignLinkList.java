@@ -4,6 +4,8 @@ package selfpracticeproblems.linkedlist.basicopertions;
 // for that we have to do for(int i = 0;  i < index - 1 ;i++) as this is 0 based indexing
 
 // If we want to traverse to any node we have to do  for (int i = 0; i < index ; i++)
+
+//For addAtHead() and addAtTail() check (size == 0) others check index
 public class DesignLinkList {
     class Node {
         int val;

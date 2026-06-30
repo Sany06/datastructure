@@ -5,7 +5,7 @@ public class OddEvenLinkedList {
         if (head == null || head.next == null) return head;
         ListNode odd = head;
         ListNode even = head.next;
-        ListNode evenHead = head.next;
+        ListNode evenHead = even;
 
         while(even != null && even.next != null) {
             odd.next = odd.next.next;

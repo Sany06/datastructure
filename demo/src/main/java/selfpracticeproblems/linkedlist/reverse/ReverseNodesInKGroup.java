@@ -16,7 +16,7 @@ public class ReverseNodesInKGroup {
             ListNode kth = getKth(groupPrev,k);
             if (kth ==null) break;
 
-            // 2. Define pointers
+            // 2. Define pointers group start
             ListNode currentGroupStart = groupPrev.next;
             ListNode nextGroupStart = kth.next;
 
