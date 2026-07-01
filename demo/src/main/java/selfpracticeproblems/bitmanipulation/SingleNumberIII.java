@@ -26,6 +26,6 @@ public class SingleNumberIII {
                 b^=n;
             }
         }
-        return new int[]{a,b};
+        return a < b ? new int[]{a, b} : new int[]{b, a};
     }
 }
