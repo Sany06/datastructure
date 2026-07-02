@@ -18,7 +18,8 @@ public class MergeIntervals {
         int[] prevInterval = intervals[0];
         list.add(prevInterval);
 
-        for (int[] currInterval : intervals) {
+        for (int i = 1 ; i< intervals.length; i++) {
+            int[] currInterval = intervals[i];
             // if current.start < merged.end then overlap exists
             //So update the end of newInterval accordingly
             if (currInterval[0] <= prevInterval[1]) {

@@ -5,7 +5,7 @@ public class InsertInterval {
         int n = intervals.length;
         int[][] newarr = new int[n + 1][2];
 
-        for (int i = 0; i < intervals.length; i++) {
+        for (int i = 1; i < intervals.length; i++) {
             newarr[i] = intervals[i];
         }
         newarr[n] = newInterval;
