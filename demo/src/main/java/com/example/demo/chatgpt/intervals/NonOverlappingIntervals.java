@@ -9,20 +9,22 @@ public class NonOverlappingIntervals {
         if (intervals.length == 0)
             return 0;
 
-        Arrays.sort(intervals, Comparator.comparing(s -> s[1]));
+        int overlap = 0;
 
-        int nonoverlapcount = 1;
+        Arrays.sort(intervals, Comparator.comparing(s-> s[0]));
 
         int[] prev = intervals[0];
 
-        for (int i = 1; i < intervals.length; i++) {
+        for (int i = 1; i< intervals.length ; i++) {
             int[] curr = intervals[i];
-            if (curr[0] >= prev[1]) {
-                nonoverlapcount++;
+
+            if(curr[0] < prev[1]){
+                overlap++;
+                prev[1] = Math.min(curr[1],prev[1]);  // this is the only diff Math.min
+            } else {
                 prev = curr;
             }
         }
-        // No of overlapping intervals = Total intervals - no of non-overlapping intervals
-        return intervals.length - nonoverlapcount;
+        return overlap;
     }
 }
