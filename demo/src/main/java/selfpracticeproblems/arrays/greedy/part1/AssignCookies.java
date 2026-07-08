@@ -1,4 +1,4 @@
-package selfpracticeproblems.arrays.greedy;
+package selfpracticeproblems.arrays.greedy.part1;
 
 import java.util.Arrays;
 

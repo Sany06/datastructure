@@ -1,4 +1,4 @@
-package selfpracticeproblems.arrays.greedy;
+package selfpracticeproblems.arrays.greedy.part1;
 
 public class BestTimeToBuyAndSellStockII {
     public int maxProfit(int[] prices) {

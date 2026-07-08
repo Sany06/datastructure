@@ -1,4 +1,4 @@
-package selfpracticeproblems.arrays.greedy;
+package selfpracticeproblems.arrays.greedy.part1;
 
 public class GasStation {
     public int canCompleteCircuit(int[] gas, int[] cost) {

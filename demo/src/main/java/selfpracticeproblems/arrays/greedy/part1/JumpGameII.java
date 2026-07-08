@@ -1,4 +1,4 @@
-package selfpracticeproblems.arrays.greedy;
+package selfpracticeproblems.arrays.greedy.part1;
 
 public class JumpGameII {
     public int jump(int[] nums) {
