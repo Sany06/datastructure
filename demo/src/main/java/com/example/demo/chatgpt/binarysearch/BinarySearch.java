@@ -4,7 +4,6 @@ public class BinarySearch {
     static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(binarySearch(arr, 4));
-        ;
     }
 
     private static int binarySearch(int[] arr, int target) {
