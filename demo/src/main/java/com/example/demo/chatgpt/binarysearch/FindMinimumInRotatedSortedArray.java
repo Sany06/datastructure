@@ -25,7 +25,7 @@ public class FindMinimumInRotatedSortedArray {
                 //Example-{16,19,1,2,3}
             } else if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
-                //Case-3  If the above two conditions are not met then we ahave to update the mid in order to traverse the array
+                //Case-3  If the above two conditions are not met then we have to update the mid in order to traverse the array
                 //So the first case can bre the arr[start] > arr[mid]. In this case we have to make end=mid-1;
                 //Example-{4,5,6,3,2,1,0}      arr[mid]=3, so   arr[start]> arr[mid]  In this scenario the peek element lies to the left of the mid
             } else if (arr[start] > arr[mid]) {

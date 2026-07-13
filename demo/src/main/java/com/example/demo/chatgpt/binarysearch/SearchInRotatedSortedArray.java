@@ -11,7 +11,7 @@ public class SearchInRotatedSortedArray {
         if (arr[pivot] == target) {
             return pivot;
         }
-        //{4,5,6,7,,0,1,2} here we are searching 6 and our pivot is 7 so  it is evident that 6 will lie btwn arr[0] to arr[pivot]
+        //{4,5,6,7,0,1,2} here we are searching 6 and our pivot is 7 so  it is evident that 6 will lie btwn arr[0] to arr[pivot]
         if (target >= arr[0]) {
             return binarySearch(arr, target, 0, pivot-1);
         } else {

@@ -1,9 +1,11 @@
 package com.example.demo.chatgpt.binarysearch.binarysearchonanswers;
 //https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/
 public class CapacityToShipPackagesWithinDDays {
+
     public int shipWithinDays(int[] weights, int D) {
         int minCapacity = 0;
         int maxCapacity = 0;
+        int ans = -1;
 
         for (int weight : weights) {
             minCapacity = Math.max(minCapacity, weight);
@@ -13,23 +15,30 @@ public class CapacityToShipPackagesWithinDDays {
         while (minCapacity < maxCapacity) {
             int mid = minCapacity + (maxCapacity - minCapacity) / 2;
 
-            int sum = 0, days = 1;
-            for (int weight : weights) {
-                if (sum + weight > mid) {
-                    days++;
-                    sum = 0;
-                }
-                sum += weight;
-            }
-
-            if (days > D) {
-                minCapacity = mid + 1;
+            if (isPossible(mid, weights, D)) {
+                ans = mid;
+                maxCapacity = mid - 1;
             } else {
-                maxCapacity = mid;
+                minCapacity = mid + 1;
             }
         }
-        return minCapacity;
+        return ans;
+    }
 
+    private boolean isPossible(int mid, int[] weights, int D) {
+        int requiredDays = 1;
+        int currentLoad = 0;
 
+        for (int weight : weights) {
+
+            if (currentLoad + weight <= mid) {
+                currentLoad += weight;
+            } else {
+                requiredDays++;
+                currentLoad = weight;
+            }
+        }
+
+        return requiredDays <= D;
     }
 }
