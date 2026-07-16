@@ -21,9 +21,9 @@ public class SingleNumberIII {
 
         for (int n : nums) {
             if ((bit & n) == 0) {
-                a ^= n;
+                a = a ^ n;
             } else{
-                b^=n;
+                b= b ^ n;
             }
         }
         return a < b ? new int[]{a, b} : new int[]{b, a};

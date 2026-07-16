@@ -7,22 +7,12 @@ public class FindUniqueNumberAmongTriplets {
     }
 
     private static int findUnique(int[] arr) {
-    int result = 0;
-
-        for (int i = 0; i < 32; i++) {
-            int sum = 0;
-
-            for (int num : arr) {
-                if (((num >> i) & 1) == 1) {
-                    sum++;
-                }
-            }
-
-            if (sum % 3 !=0) {
-                result = result | (1 << i);
-            }
+        int ones = 0, twos = 0;
+        for (int num: arr) {
+            ones = (ones ^ num ) & ~twos;
+            twos = (twos ^ num) & ~ones;
         }
-        return result;
+        return ones;
     }
 
 

@@ -7,7 +7,8 @@ public class SetIthBit {
         System.out.println(setIthBit(n,i));
     }
 
-
+    //Step - 1 : We are left shifting the bit of 1 by i times
+    // then we are doing OR with that num
     private static int setIthBit(int n, int i) {
     return ( 1 << i) | n;
     }
