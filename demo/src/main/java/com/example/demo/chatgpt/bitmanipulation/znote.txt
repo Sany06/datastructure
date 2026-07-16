@@ -8,7 +8,7 @@ revision Sequence
 6: Reset ith bit (make 0)
 7: Find position of rightmost set bit
 8: Find the unique element present in an array others are present 3 times
-9: Find num of digits
+9: Number of digits
 10: Find if a num is power of 2
 11: Find power of num
 12: Find no of set bit
