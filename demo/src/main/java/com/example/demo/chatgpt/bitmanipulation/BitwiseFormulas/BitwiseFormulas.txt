@@ -2,11 +2,11 @@ a^a = 0
 a^0 = a
 a^1 = ~a
 
-Find no of bits : n & (n - 1)
+Find no of bits : while(n > 0) {n & (n - 1)}
 Find if num is power of 2 : (n & (n-1)) == 0
 
 Check if num is odd/even (n & 1) == 0 then even else odd
-Check if ith bit is set bit (n & (1 << i)) != 0
+Check if ith bit is set bit (n >> i) & 1 == 1
 Set ith Bit : n | (1 << i)
 Reset/Clear ith bit n & ~(1 << i)
 
