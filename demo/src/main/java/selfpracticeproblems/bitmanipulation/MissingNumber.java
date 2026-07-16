@@ -7,7 +7,7 @@ public class MissingNumber {
 
         int xor = arr.length;
         for (int i = 0 ; i< arr.length ; i++) {
-            xor ^= i ^ arr[i];
+            xor = xor ^  i ^ arr[i];
         }
         System.out.println(xor);
     }
