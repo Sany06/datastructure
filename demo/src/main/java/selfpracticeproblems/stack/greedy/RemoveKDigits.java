@@ -6,14 +6,14 @@ public class RemoveKDigits {
         StringBuilder sb = new StringBuilder();
 
         // we will traverse all the chars in the num and append it in the stringbuilder.
-        // If the current num is less than the last num of the sb then we will delete that num
+        // If the current digit is less than the last digit of the sb then we will delete that digit
         for (int i = 0; i < num.length(); i++) {
-
-            while(k > 0 && sb.length() > 0 && sb.charAt(sb.length() - 1) > num.charAt(i)) {
+            char digit = num.charAt(i);
+            while(k > 0 && sb.length() > 0 && sb.charAt(sb.length() - 1) > digit) {
                 sb.deleteCharAt(sb.length() - 1);
                 k--;
             }
-            sb.append(num.charAt(i));
+            sb.append(digit);
         }
 
         //for num like 12345 where the last digit is always less than the next digit

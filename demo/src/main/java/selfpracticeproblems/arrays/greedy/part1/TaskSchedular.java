@@ -5,7 +5,7 @@ public class TaskSchedular {
         int[] freq = new int[26];
         // Step 1: Count frequency of each task
         for (char c : tasks) {
-            freq[c - 'A']++;
+            freq[c - 'A']++;     //This gives the zero-based position of an uppercase letter.
         }
 
         // Step 2: Find the maximum frequency

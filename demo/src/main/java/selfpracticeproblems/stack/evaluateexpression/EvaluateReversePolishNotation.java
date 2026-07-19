@@ -17,7 +17,8 @@ public class EvaluateReversePolishNotation {
                         int a = stack.pop();
                         stack.push(a-b);
                         break;
-                    case "/" : int d = stack.pop();
+                    case "/" :
+                        int d = stack.pop();
                         int c = stack.pop();
                         stack.push(c / d);
                         break;

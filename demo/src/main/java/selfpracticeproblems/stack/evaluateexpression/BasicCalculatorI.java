@@ -13,7 +13,7 @@ public class BasicCalculatorI {
                 char c = s.charAt(i);
 
                 if (Character.isDigit(c)) {
-                    num = num * 10 + (c - '0');
+                    num = num * 10 + (c - '0');    // (c - '0') This converts a digit character into its numeric value
                 }
                 else if (c == '+') {
                     result += sign * num;
