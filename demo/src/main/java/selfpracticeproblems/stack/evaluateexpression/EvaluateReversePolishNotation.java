@@ -8,21 +8,17 @@ public class EvaluateReversePolishNotation {
 
             for (String token : tokens) {
                 switch(token) {
-                    case "+" : stack.push(stack.pop() + stack.pop());
-                        break;
-                    case "*" : stack.push(stack.pop() * stack.pop());
-                        break;
-                    case "-" :
-                        int b = stack.pop();
-                        int a = stack.pop();
+                    case "+" -> stack.push(stack.pop() + stack.pop());
+                    case "*" -> stack.push(stack.pop() * stack.pop());
+                    case "-" -> {
+                        int b = stack.pop(), a = stack.pop();
                         stack.push(a-b);
-                        break;
-                    case "/" :
-                        int d = stack.pop();
-                        int c = stack.pop();
-                        stack.push(c / d);
-                        break;
-                    default : stack.push(Integer.parseInt(token));
+                    }
+                    case "/" -> {
+                        int d = stack.pop(), c = stack.pop();
+                        stack.push(c/d);
+                    }
+                    default-> stack.push(Integer.parseInt(token));
                 }
             }
             return stack.pop();
