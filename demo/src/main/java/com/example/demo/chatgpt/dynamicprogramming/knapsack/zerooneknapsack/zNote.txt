@@ -1,0 +1,7 @@
+############################Revision Sequence#################################
+1. Subset Sum
+2. Equal sum Partition
+3. Count Of Subset Sum
+4. PartitionArrayIntoTwoArraysToMinimizeSumDifference
+5. PartitionsWithGivenDifference
+6. Target Sum

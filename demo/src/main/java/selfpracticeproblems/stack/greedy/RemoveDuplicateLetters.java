@@ -21,7 +21,8 @@ public class RemoveDuplicateLetters {
 
             while ( !stack.isEmpty() &&
                         ch < stack.peek() &&
-                        lastseenIndex[stack.peek() - 'a'] > i) {
+                        lastseenIndex[stack.peek() - 'a'] > i)   //Can we safely remove the top? So we only pop when another copy exists later.
+            {
                 seen[stack.pop() - 'a'] = false;
             }
 
