@@ -18,7 +18,14 @@ public class Practice {
 
         findDuplicateElements();
         groupAnaGrams();
+        sumOfAllElements();
 
+    }
+
+    private static void sumOfAllElements() {
+        List<Integer> list = List.of(1,2,3,4,5);
+        Integer reduce = list.stream().reduce(0, Integer::sum);
+        System.out.println(reduce);
     }
 
 
@@ -62,7 +69,7 @@ public class Practice {
     private static void groupByWordlength() {
         List<String> fruits = Arrays.asList("apple", "banana", "kiwi", "pear", "grape");
         Map<Integer, List<String>> result = fruits.stream()
-                .collect(Collectors.groupingBy(word -> word.length()));
+                .collect(Collectors.groupingBy(String::length));
     }
 
     private static void printfirstNonRepeatingCharacterInString() {
