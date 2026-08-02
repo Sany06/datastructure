@@ -1,0 +1,12 @@
+###########################################Revision Sequence##################
+Longest Common Subsequence
+Longest Common Substring
+Print LCS
+LengthOfShortestCommonSupersequence
+MinimumNumberOfDeletionsAndInsertions
+
+LongestPalindromicSubsequence
+MinimumNumberOfDeletionInAStringToMakeItAPalindrome/MinimumInsertionStepsToMakeAStringPalindrome
+Print SCS
+LongestRepeatingSubsequence
+SubSequencePatternMatching
