@@ -2,11 +2,11 @@ package com.example.demo.chatgpt.dynamicprogramming.knapsack.zerooneknapsack;
 //https://www.geeksforgeeks.org/problems/partitions-with-given-difference/1
 public class PartitionsWithGivenDifference {
     // Code Logic
-    //s1 - s2 = diff
-    //s1 + s2 = totalSum
+    //p1 - p2 = diff
+    //p1 + p2 = totalSum
     //---------------------
-    //2s1     = diff + totalSum
-    // s1     = (diff + totalSum)/2
+    //2p1     = diff + totalSum
+    // p1     = (diff + totalSum)/2
     public int countPartitions(int[] arr, int diff) {
         int totalSum = 0;
         for (int a : arr) totalSum += a;

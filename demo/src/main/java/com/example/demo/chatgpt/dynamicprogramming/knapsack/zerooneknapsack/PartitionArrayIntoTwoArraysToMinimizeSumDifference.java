@@ -34,10 +34,11 @@ public class PartitionArrayIntoTwoArraysToMinimizeSumDifference {
 
         int min = Integer.MAX_VALUE;
 
-        for (int s1 = 0; s1 < totalSum / 2; s1++) {
-            if (dp[n][s1]) {
-                int s2 = totalSum - s1;
-                min = Math.min(min, Math.abs(s2 - s1));
+        for (int i = 0; i < totalSum / 2; i++) {
+            if (dp[n][i]) {
+                int s2 = totalSum - i;
+                min = Math.min(min, Math.abs(s2 - i));
+                //min = Math.min(min, Math.abs(totalSum - 2 *i));
             }
         }
 
