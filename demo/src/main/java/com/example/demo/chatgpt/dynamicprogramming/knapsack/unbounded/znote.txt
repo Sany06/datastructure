@@ -1,0 +1,6 @@
+The main diff in code between 0/1 Knapsack and unbounded knapsack is
+
+
+if (nums[i - 1] <= j) {
+  dp[i][j] = dp[i][j - nums[i - 1]] + dp[i - 1][j];
+ }

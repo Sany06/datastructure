@@ -10,12 +10,6 @@ public class CoinChangeII {
 
         for (int i = 1; i <= nums.length; i++) {
             for (int j = 0; j <= target; j++) {
-
-                if (nums[i - 1] == 0) {
-                    // special case: zero doubles count
-                    dp[i][j] = dp[i - 1][j] * 2;
-                }
-
                 if (nums[i - 1] <= j) {
                     dp[i][j] = dp[i][j - nums[i - 1]] + dp[i - 1][j];
                 } else {
