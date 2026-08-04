@@ -21,8 +21,8 @@ public class MinimumNumberOfDeletionsAndInsertions {
         }
         int lcs = dp[m][n];
 
-        int insertion = s1.length()-lcs;
-        int deletion = s2.length() - lcs;
+        int deletion = s1.length()-lcs;
+        int insertion = s2.length() - lcs;
 
         return insertion + deletion;
     }
