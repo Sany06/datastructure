@@ -14,7 +14,7 @@ public class SplitArrayLargestSum {
         while (min <= max) {
             int mid = min + (max - min) / 2;
 
-            if (canSplit(nums, k, mid)) {
+            if (ispossible(nums, k, mid)) {
                 ans = mid;
                 max = mid - 1;
             } else {
@@ -24,20 +24,17 @@ public class SplitArrayLargestSum {
         return ans;
     }
 
-    private boolean canSplit(int[] nums, int k, int mid) {
-        int subarraySum = 0;
-        int arrayCount = 1;
+    public boolean ispossible(int[] arr, int mid, int k) {
+        int count = 0, sum = 0;
 
-        for (int num : nums) {
-            if (num + subarraySum > mid) {
-                arrayCount++;
-                subarraySum = num;     // NOTE: here er are not doing subarraySum = num as num + subarraySum > mid so  we cant
-                                        // place the current num in the current array and the next array will start with this num
+        for (int n : arr) {
+            if (sum + n <= mid) {
+                sum += n;
             } else {
-                subarraySum += num;
+                count++;
+                sum = n;
             }
         }
-        return arrayCount <= k;  //Here we are doing <= k as if arrayCount is < k then we can split the array into furthur subarray
-                                    //But if arrayCount is > k we need to increase the mid value
+        return count < k;
     }
 }
