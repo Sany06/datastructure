@@ -23,4 +23,18 @@ public class MinimumNumberOfArrowsToBurstBalloons {
         return arrows;
 
     }
+
+    public int findMinArrowShots1(int[][] points) {
+        int baloons = 1;
+        Arrays.sort(points, Comparator.comparing(s-> s[1]));
+        int[] prev = points[0];
+        for(int i = 1; i< points.length ; i++) {
+            int[] curr = points[i];
+            if(curr[0] > prev[1]) {
+                baloons++;
+                prev = curr;
+            }
+        }
+        return baloons;
+    }
 }
