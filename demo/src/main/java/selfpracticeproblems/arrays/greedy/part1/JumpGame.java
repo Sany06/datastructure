@@ -15,11 +15,11 @@ public class JumpGame {
     public boolean canJump1(int[] nums) {
         int maxReach = 0;
 
-        for(int i = 0; i< nums.length; i++) {
-            if (i>maxReach) {
-                return true;
+        for (int i = 0; i < nums.length; i++) {
+            if (i > maxReach) {
+                return false;
             }
-            maxReach = Math.max(maxReach, i+nums[i]);
+            maxReach = Math.max(maxReach, i + nums[i]);
         }
         return true;
     }

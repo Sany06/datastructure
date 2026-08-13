@@ -1,4 +1,4 @@
-LongestSubarrayWithSumK
+LongestSubarrayWithSumK [Positive integers]
 MinimumSizeSubarraySumK
 Longest Substring Without Repeating Characters
 SubarrayProductLessThanK
