@@ -3,6 +3,12 @@ package selfpracticeproblems.arrays.greedy.part2;
 import java.util.Arrays;
 
 public class LargestNumber {
+    //1. Convert numbers → Strings
+    //2. Compare every pair:
+    //       "a"+"b" vs "b"+"a"
+    //3. Put the one producing the bigger combination first
+    //4. Concatenate everything
+    //5. Return the result
     public String largestNumber(int[] nums) {
         String[] str = new String[nums.length];
 
