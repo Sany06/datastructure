@@ -12,21 +12,21 @@ public class Permutations {
         return list;
     }
 
-    public void permutation(int[] nums, boolean[] used, List<Integer> temp, List<List<Integer>> list) {
+    public void permutation(int[] nums, boolean[] used, List<Integer> processed, List<List<Integer>> list) {
 
-        if (temp.size() == nums.length) {
-            list.add(new ArrayList<>(temp));
+        if (processed.size() == nums.length) {
+            list.add(new ArrayList<>(processed));
             return;
         }
 
         for (int i = 0; i < nums.length; i++) {
             if (used[i]) continue;
-            temp.add(nums[i]);
+            processed.add(nums[i]);
             used[i] = true;
-            permutation(nums, used, temp, list);
+            permutation(nums, used, processed, list);
 
             used[i] = false;
-            temp.remove(temp.size() - 1);
+            processed.remove(processed.size() - 1);
 
         }
     }

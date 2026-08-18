@@ -21,6 +21,7 @@ public class PermutationsII {
         }
 
         for (int i = 0; i < nums.length; i++) {
+            //!used[i - 1] == the previous duplicate is NOT currently being used.
             if (i > 0 && nums[i] == nums[i - 1] && !used[i - 1]) continue;
             if (used[i]) continue;
             temp.add(nums[i]);

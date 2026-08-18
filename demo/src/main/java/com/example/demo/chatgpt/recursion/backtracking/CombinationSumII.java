@@ -26,6 +26,7 @@ public class CombinationSumII {
             if (candidates[i] > target) break;
 
             tempList.add(candidates[i]);
+            //Observe we are incrementing the i here to i+1
             candidateList(candidates, target - candidates[i], i+1 , tempList, list);
             tempList.remove(tempList.size() - 1);
         }

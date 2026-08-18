@@ -13,6 +13,7 @@ public class LongestValidParentheses {
                 stack.push(i);
             } else {
                 stack.pop();
+                // Unmatched ')'
                 if (stack.isEmpty()) {
                     stack.push(i);
                 } else {

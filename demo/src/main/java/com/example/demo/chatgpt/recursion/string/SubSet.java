@@ -1,4 +1,4 @@
-package selfpracticeproblems.recursion.string;
+package com.example.demo.chatgpt.recursion.string;
 
 import java.util.ArrayList;
 import java.util.List;

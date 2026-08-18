@@ -17,4 +17,18 @@ public class BackspaceStringCompare {
         }
         return sb.toString();
     }
+
+    public String compare(String s) {
+        StringBuilder sb = new StringBuilder();
+
+        for(char c : s.toCharArray()) {
+            if(c == '#'){
+                if(sb.length() > 0)
+                    sb.deleteCharAt(sb.length() - 1);
+            } else {
+                sb.append(c);
+            }
+        }
+        return sb.toString();
+    }
 }
