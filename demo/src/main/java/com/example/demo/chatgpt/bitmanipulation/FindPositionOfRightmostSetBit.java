@@ -2,7 +2,7 @@ package com.example.demo.chatgpt.bitmanipulation;
 
 public class FindPositionOfRightmostSetBit {
     static void main(String[] args) {
-        System.out.println(findPositionOfRightMostSetBit(10));
+        System.out.println(findPositionOfRightMostSetBit(1100));
     }
 
     //This problem is also known as least significant set bit

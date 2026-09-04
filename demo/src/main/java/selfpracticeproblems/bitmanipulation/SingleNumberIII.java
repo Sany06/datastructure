@@ -20,6 +20,9 @@ public class SingleNumberIII {
         int a = 0, b = 0;
 
         for (int n : nums) {
+            //after finding the rightmost set bit we will & all nums in array
+            //and check if num & bit == 0 then we will put that num in 0's bucket
+            //else 1's bucket
             if ((bit & n) == 0) {
                 a = a ^ n;
             } else{

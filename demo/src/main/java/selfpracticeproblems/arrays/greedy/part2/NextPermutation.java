@@ -4,7 +4,7 @@ public class NextPermutation {
 
     public void nextPermutation(int[] nums) {
         int i = nums.length - 2;
-        //Find the pivot where pitot is nums[i] < nums[i + 1]
+        //Find the pivot where pivot is nums[i] < nums[i + 1]
         // [1 ,3 , 5 , 4 , 2] here pivot is 3, we will do i-- till nums[i] >= nums[i + 1]
         while (i >= 0 && nums[i] >= nums[i + 1]) {
             i--;
