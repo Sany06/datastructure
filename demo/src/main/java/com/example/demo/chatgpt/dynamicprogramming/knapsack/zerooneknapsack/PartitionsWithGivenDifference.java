@@ -11,6 +11,7 @@ public class PartitionsWithGivenDifference {
         int totalSum = 0;
         for (int a : arr) totalSum += a;
 
+        //if totalSum + diff = odd number then partitioning into 2 parts is not possible
         if ((totalSum + diff) % 2 != 0) return 0;
 
 

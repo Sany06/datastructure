@@ -15,14 +15,11 @@ public class PartitionArrayIntoTwoArraysToMinimizeSumDifference {
 
         boolean[][] dp = new boolean[n + 1][totalSum + 1];
 
-        // base case
-        for (int i = 0; i <= n; i++) {
-            dp[i][0] = true;
-        }
+        dp[0][0] = true;
 
         // fill dp
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= totalSum; j++) {
+            for (int j = 0; j <= totalSum; j++) {
 
                 if (nums[i - 1] <= j) {
                     dp[i][j] = dp[i - 1][j - nums[i - 1]] || dp[i - 1][j];
@@ -34,7 +31,7 @@ public class PartitionArrayIntoTwoArraysToMinimizeSumDifference {
 
         int min = Integer.MAX_VALUE;
 
-        for (int i = 0; i < totalSum / 2; i++) {
+        for (int i = 0; i <= totalSum / 2; i++) {
             if (dp[n][i]) {
                 int s2 = totalSum - i;
                 min = Math.min(min, Math.abs(s2 - i));
