@@ -30,7 +30,11 @@ public class PartitionArrayIntoTwoArraysToMinimizeSumDifference {
         }
 
         int min = Integer.MAX_VALUE;
-
+        //s1 + s2 = totalSum
+        //Here the requirement is s1 - s2 = MIN DIFF
+        // we can replace s2 as totalSum - s1
+        // so s1 - (totalSum - s1) = totalSum - 2s1
+        //since we are taking Math.abs() so ordering becomes irrelevant
         for (int i = 0; i <= totalSum / 2; i++) {
             if (dp[n][i]) {
                 int s2 = totalSum - i;
