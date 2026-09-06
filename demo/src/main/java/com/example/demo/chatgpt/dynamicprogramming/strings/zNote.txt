@@ -2,7 +2,7 @@
 Longest Common Subsequence
 Longest Common Substring/Maximum Length of Repeated Subarray
 Print LCS
-LengthOfShortestCommonSupersequence  (m+n)-dp[m][n]
+LengthOfShortestCommonSupersequence  (m+n)-lcs
 MinimumNumberOfDeletionsAndInsertions  (x.length() - lcs) + (y.length() - lcs)
 
 LongestPalindromicSubsequence
