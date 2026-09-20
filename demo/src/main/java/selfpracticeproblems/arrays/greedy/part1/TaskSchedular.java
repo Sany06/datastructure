@@ -30,4 +30,8 @@ public class TaskSchedular {
         // Last block contains maxCount tasks
         return Math.max(tasks.length, (maxfreq - 1) * (n + 1) + maxcount);
     }
+
+    //maxFreq - 1 → Number of gaps between the most frequent task's occurrences.
+    //n + 1 → Size of each gap: 1 task + n cooldown slots.
+    //maxFreqCount → Number of tasks having the same maximum frequency, which occupy the final positions.
 }

@@ -10,13 +10,14 @@ public class SearchInRotatedSortedArrayII {
             int mid = start + (end - start)/2;
 
             if (arr[mid] == target) return mid;
-
+            // Left half is sorted
             if (arr[start] <= arr[mid]) {
                 if (target >= arr[start] && target < arr[mid]) {
                     end = mid - 1;
                 } else {
                     start = mid + 1;
                 }
+                // Right half is sorted
             } else {
                 if (target > arr[mid] && target <= arr[end]) {
                     start = mid + 1;
