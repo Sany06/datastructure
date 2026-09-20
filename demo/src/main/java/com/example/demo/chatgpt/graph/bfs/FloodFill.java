@@ -7,12 +7,9 @@ public class FloodFill {
     }
 
     public  void dfs(int[][] image, int r, int c, int original ,int color) {
-        if(r > image.length || r < 0 || c > image[0].length || c < 0 ||
-                image[r][c] == color) {
+        if(r >= image.length || r < 0 || c >= image[0].length || c < 0 || image[r][c] == color || image[r][c] != original)  {
             return;
         }
-
-        if(image[r][c] != original) return;
 
         image[r][c] = color;
 
