@@ -1,0 +1,50 @@
+package com.example.demo.chatgpt.graph.dfs;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class RottenOranges {
+    //Time: O(m × n), space: O(m × n)
+    public int orangesRotting(int[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+        Queue<int[]> queue = new LinkedList<>();
+        int freshCount = 0;
+
+    // 1. Add all rotten oranges to the queue
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == 2) {
+                    queue.offer(new int[]{i, j, 0}); // {row, col, time}
+                } else if (grid[i][j] == 1) {
+                    freshCount++;
+                }
+            }
+        }
+
+        if (freshCount == 0) return -1;
+
+        int maxTime = 0;
+        int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
+        // 2. Multi-source BFS
+        while (!queue.isEmpty()) {
+            int[] curr = queue.poll();
+            int r = curr[0], c = curr[1], time = curr[2];
+            maxTime = Math.max(maxTime, time);
+
+            for (int[] dir : directions) {
+                int nr = r + dir[0];
+                int nc = c + dir[1];
+
+                if (nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc] == 1) {
+                    grid[nr][nc] = 2; // Mark as rotten
+                    freshCount--;
+                    queue.offer(new int[]{nr, nc, time + 1});
+                }
+            }
+        }
+
+        return freshCount == 0 ? maxTime : -1;
+    }
+}
