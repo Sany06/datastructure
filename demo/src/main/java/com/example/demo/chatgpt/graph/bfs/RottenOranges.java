@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.graph.dfs;
+package com.example.demo.chatgpt.graph.bfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

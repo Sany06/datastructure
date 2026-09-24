@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.graph.bfs;
+package com.example.demo.chatgpt.graph.dfs;
 
 public class MaxAreaOfIsland {
     public int maxAreaOfIsland(int[][] grid) {
