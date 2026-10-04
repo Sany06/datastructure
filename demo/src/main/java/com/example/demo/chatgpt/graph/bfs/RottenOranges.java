@@ -22,7 +22,7 @@ public class RottenOranges {
             }
         }
 
-        if (freshCount == 0) return -1;
+        if (freshCount == 0) return 0;
 
         int maxTime = 0;
         int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};

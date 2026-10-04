@@ -7,11 +7,11 @@ public class RodCuttingProblem {
     }
 
     private static int solution(int[] prices, int n) {
-        int[][] dp = new int[n + 1][n + 1];
+        int[][] dp = new int[prices.length + 1][n + 1];
 
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= prices.length; i++) {
             for (int j = 1; j <= n; j++) {
-
+                //"First assume I don't take piece i. Then, if piece i fits, check whether taking it gives me a better answer."
                 dp[i][j] = dp[i - 1][j];
 
                 if (i <= j) {
@@ -20,6 +20,6 @@ public class RodCuttingProblem {
             }
         }
 
-        return dp[n][n];
+        return dp[prices.length][n];
     }
 }

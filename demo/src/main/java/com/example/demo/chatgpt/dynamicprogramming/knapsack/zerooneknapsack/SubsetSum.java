@@ -7,7 +7,7 @@ public class SubsetSum {
 
         dp[0][0] = true;
 
-
+        //Can I make sum j using the first i elements of the array?
         for (int i = 1; i <= arr.length; i++) {
             for (int j = 0; j <= sum; j++) {
 

@@ -22,6 +22,7 @@ public class CourseSchedule {
             indegree[course]++;
         }
 
+        //finding the courses which can be taken immediately i.e indegree[i] = 0
         Queue<Integer> q = new LinkedList<>();
         for (int i = 0; i < numCourses; i++) {
             if (indegree[i] == 0) {

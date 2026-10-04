@@ -16,8 +16,11 @@ public class BipartiteGraph {
                     int node = q.poll();
                     for(int n : graph[node]){
                         if(color[n] == color[node]) return false;
-                        else if(color[n] == 0) q.offer(n);
-                        color[n] = -color[node];
+                        else if(color[n] == 0) {
+                            q.offer(n);
+                            color[n] = -color[node];
+                        }
+
                     }
                 }
             }

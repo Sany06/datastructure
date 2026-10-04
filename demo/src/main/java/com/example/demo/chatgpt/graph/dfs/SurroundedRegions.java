@@ -25,7 +25,8 @@ public class SurroundedRegions {
             }
         }
     }
-
+    //Through this we are marking the 0 which are connected to the border cells i.e the cells which are safe
+    //we are marking the cells as #
     public void dfs(char[][] board, int r , int c) {
         int m = board.length, n = board[0].length;
         if(r < 0 || c < 0 ||  r >= m  || c >= n || board[r][c] != 'O' ) return;
