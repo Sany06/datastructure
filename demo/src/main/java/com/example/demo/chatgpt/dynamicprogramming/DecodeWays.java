@@ -13,7 +13,7 @@ public class DecodeWays {
         for (int i = 2; i <= n; i++) {
             int onesplace = s.charAt(i - 1) - '0';
 
-            if (onesplace >= 0) {
+            if (onesplace > 0) {
                 dp[i] = dp[i] + dp[i - 1];
             }
 
