@@ -1,7 +1,7 @@
 package com.example.demo.chatgpt.dynamicprogramming.mcm;
 
 public class MatrixChainMultiplication {
-    static int matrixMultiplication(int arr[]) {
+    static int matrixMultiplication(int[] arr) {
         int n = arr.length;
         int[][] dp = new int[n][n];
 
