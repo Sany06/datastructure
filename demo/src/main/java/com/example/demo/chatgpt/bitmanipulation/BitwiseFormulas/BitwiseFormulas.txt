@@ -12,3 +12,6 @@ Reset/Clear ith bit n & ~(1 << i)
 
 
 To count no of set bits we have to do [while(n > 0) n = n & (n-1)]
+
+Isolating Rightmost set bit : n & -n; [Used to find the rightmost set bit]
+Resetting the rightmost set bit : n & (n - 1) [Used for counting the number of set bits]
