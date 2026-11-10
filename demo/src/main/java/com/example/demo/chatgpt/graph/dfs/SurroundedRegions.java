@@ -1,6 +1,11 @@
 package com.example.demo.chatgpt.graph.dfs;
 
 public class SurroundedRegions {
+    //TC : O(m x n)
+    //TC : O(m x n)
+    //Soln approach : First we will start from all the 4 side walls and mark the cells which will be safe / whose 0 wont be changed by
+    // converting them to #
+    // After that we will again traverse through the matrix and change 0 to x, if we get # then it will be converted to 0
     public void solve(char[][] board) {
         int m = board.length;
         int n = board[0].length;

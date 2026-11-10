@@ -1,6 +1,7 @@
-package com.example.demo.chatgpt.strings;
+package com.example.demo.chatgpt.strings.slidingwindow;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class GroupAnagrams {
     static void main() {

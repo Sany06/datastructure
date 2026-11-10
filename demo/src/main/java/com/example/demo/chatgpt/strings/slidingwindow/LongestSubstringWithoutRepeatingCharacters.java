@@ -1,4 +1,4 @@
-package com.example.demo.chatgpt.strings;
+package com.example.demo.chatgpt.strings.slidingwindow;
 
 import java.util.HashSet;
 

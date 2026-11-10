@@ -1,5 +1,5 @@
 package com.example.demo.chatgpt.dynamicprogramming.strings;
-
+//https://www.geeksforgeeks.org/problems/longest-common-substring1452/1
 public class LongestCommonSubstring {
 
     public int longCommSubstr(String s1, String s2) {
